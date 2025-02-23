@@ -19,6 +19,13 @@ export const descriptionItemProps = buildProps({
     default: 1,
   },
   /**
+   * @description the number of rows a cell should span
+   */
+  rowspan: {
+    type: Number,
+    default: 1,
+  },
+  /**
    * @description column width, the width of the same column in different rows is set by the max value (If no `border`, width contains label and content)
    */
   width: {
@@ -29,6 +36,13 @@ export const descriptionItemProps = buildProps({
    * @description column minimum width, columns with `width` has a fixed width, while columns with `min-width` has a width that is distributed in proportion (If no`border`, width contains label and content)
    */
   minWidth: {
+    type: [String, Number],
+    default: '',
+  },
+  /**
+   * @description column label width, if not set, it will be the same as the width of the column. Higher priority than the `label-width` of `Descriptions`
+   */
+  labelWidth: {
     type: [String, Number],
     default: '',
   },

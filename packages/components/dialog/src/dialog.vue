@@ -47,6 +47,9 @@
               :draggable="draggable"
               :overflow="overflow"
               :fullscreen="fullscreen"
+              :header-class="headerClass"
+              :body-class="bodyClass"
+              :footer-class="footerClass"
               :show-close="showClose"
               :title="title"
               :aria-level="headerAriaLevel"
@@ -142,14 +145,14 @@ const overlayEvent = useSameTarget(onModalClick)
 
 const draggable = computed(() => props.draggable && !props.fullscreen)
 
-const resetPostion = () => {
-  dialogContentRef.value?.resetPostion()
+const resetPosition = () => {
+  dialogContentRef.value?.resetPosition()
 }
 
 defineExpose({
   /** @description whether the dialog is visible */
   visible,
   dialogContentRef,
-  resetPostion,
+  resetPosition,
 })
 </script>
